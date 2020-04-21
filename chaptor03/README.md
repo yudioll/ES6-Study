@@ -48,9 +48,37 @@
     const [foo1=3]=[undefined]
     console.log(foo1)//3
 ```
-es6内部按照严格模式将值与undefined判断只要不相等就是取默认值
+- es6内部按照严格模式将值与undefined判断只要不相等就是取默认值
 ```js
     const [foo=1]=[null]
     console.log(foo)//null
 ```
-null 不严格等于undefined
+- null 不严格等于undefined
+
+## 对象的解构赋值
+```js
+    let {foo,bar}={foo:1,bar:2}
+    console.log(foo)//1
+    console.log(bar)//2
+```
+- 与数组不同的是，解构的变量必须与属性同名，如果变量名与属性名不一致必须写成下面这样
+```js
+    let {foo:baz,bar}={foo:1,bar:2}
+    console.log(baz)//1
+```
+- 嵌套模型的解构
+```js
+    var obj={
+        p:[
+            'hello',
+            {
+                name:'aaa'
+            }
+        ]
+    }
+    let {p:[a,{name}]}=obj
+    // console.log(p)//报错
+    console.log(a)//hello
+    console.log(name)//aaa
+```
+- 在这里p是模式

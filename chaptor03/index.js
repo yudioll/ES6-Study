@@ -30,3 +30,24 @@
 
 // const [foo=1]=[null]
 // console.log(foo)//null
+
+// let {foo,bar}={foo:1,bar:2}
+// console.log(foo)//1
+// console.log(bar)//2
+
+// let {foo:baz,bar}={foo:1,bar:2}
+// console.log(baz)//1
+
+var obj={
+    p:[
+        'hello',
+        {
+            name:'aaa'
+        }
+    ]
+}
+let {p:[a,{name}]}=obj
+// console.log(p)//报错
+console.log(a)//hello
+console.log(name)//aaa
+
