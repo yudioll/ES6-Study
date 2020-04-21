@@ -78,7 +78,10 @@
     }
     let {p:[a,{name}]}=obj
     // console.log(p)//报错
-    console.log(a)//hello
+    console.log(a) //hello
     console.log(name)//aaa
 ```
 - 在这里p是模式
+
+- 默认值写法，判断模式是解构的值严格等于undefined
+
